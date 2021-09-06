@@ -1,0 +1,94 @@
+db.facturacion.insert([{
+    id_factura: '7001',
+    fecha_hora: '2021-09-05 15:01:03',
+    subtotal: 31280,
+    impuesto: 2720,
+    total: 34000,
+    id_cliente: 3001,
+    id_empleado: 2003,
+    id_sede: 1001,
+    productos: [{
+            id_producto: 5001,
+            nombre_producto: 'Hamburguesa BBQ',
+            cantidad: 1,
+            precio: 20000
+            },
+            {
+            id_producto: 5003,
+            nombre_producto: 'Soda Michelada',
+            cantidad: 2,
+            precio: 7000
+            }
+    ]
+},
+{
+    id_factura: '7002',
+    fecha_hora: '2021-09-05 15:15:09',
+    subtotal: 51520,
+    impuesto: 4480,
+    total: 56000,
+    id_cliente: 3002,
+    id_empleado: 2002,
+    id_sede: 1001,
+    productos: [{
+            id_producto: 5002,
+            nombre_producto: 'Pastas Napolitana',
+            cantidad: 2,
+            precio: 22000
+            },
+            {
+            id_producto: 5004,
+            nombre_producto: 'Limonada',
+            cantidad: 2,
+            precio: 6000
+            }
+    ]
+},
+{
+    id_factura: '7003',
+    fecha_hora: '2021-09-05 15:21:54',
+    subtotal: 42320,
+    impuesto: 3680,
+    total: 46000,
+    id_cliente: 3003,
+    id_empleado: 2002,
+    id_sede: 1002,
+    productos: [{
+            id_producto: 5001,
+            nombre_producto: 'Hamburguesa BBQ',
+            cantidad: 2,
+            precio: 20000
+            },
+            {
+            id_producto: 5004,
+            nombre_producto: 'Limonada',
+            cantidad: 1,
+            precio: 6000
+            }
+    ]
+},
+{
+    id_factura: '7004',
+    fecha_hora: '2021-09-05 16:56:54',
+    subtotal: 53360,
+    impuesto: 4640,
+    total: 58000,
+    id_cliente: 3002,
+    id_empleado: 2001,
+    id_sede: 1003,
+    productos: [{
+            id_producto: 5002,
+            nombre_producto: 'Pastas Napolitana',
+            cantidad: 2,
+            precio: 22000
+            },
+            {
+            id_producto: 5003,
+            nombre_producto: 'Soda Michelada',
+            cantidad: 2,
+            precio: 7000
+            }
+    ]
+}
+
+])

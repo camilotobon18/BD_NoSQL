@@ -1,0 +1,38 @@
+db.menu.insert([{
+    id_producto: 5001,
+    nombre_producto: 'Hamburguesa BBQ',
+    precio: 20000,
+    especialidad: 'Comida rapida',
+    medida: 150,
+    unidad_medida: 'grs',
+    impuesto: 0.08
+},
+{
+    id_producto: 5002,
+    nombre_producto: 'Pastas Napolitana',
+    precio: 22000,
+    especialidad: 'Comida Italiana',
+    medida: 200,
+    unidad_medida: 'grs',
+    impuesto: 0.08
+}, 
+{
+    id_producto: 5003,
+    nombre_producto: 'Soda Michelada',
+    precio: 7000,
+    especialidad: 'Bebidas',
+    medida: 400,
+    unidad_medida: 'ml',
+    impuesto: 0.08
+},
+{
+    id_producto: 5004,
+    nombre_producto: 'Limonada',
+    precio: 6000,
+    especialidad: 'Bebidas',
+    medida: 400,
+    unidad_medida: 'ml',
+    impuesto: 0.08
+}
+
+])

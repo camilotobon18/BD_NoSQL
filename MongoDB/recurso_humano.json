@@ -1,0 +1,41 @@
+db.recurso_humano.insert([{
+    id_empleado: '2001',
+    nombre_empleado: 'Fabian Patiño',
+    telefonos: ['5645642', '9895645'],
+    ubicacion: {
+            direccion: 'CQ 02 012 016',
+            ciudad: 'Medellin'
+    },
+    salario: 1500000,
+    cargo: 'Auxiliar de cocina',
+    fecha_nacimiento: '1985-01-02',
+    id_sede: '1001'
+},
+{
+    id_empleado: '2002',
+    nombre_empleado: 'Anderson Jimenez',
+    telefonos: ['15565545', '48575445'],
+    ubicacion: {
+            direccion: 'CR 012 065 025',
+            ciudad: 'Envigado'
+    },
+    salario: 2500000,
+    cargo: 'Cajero',
+    fecha_nacimiento: '1984-03-02',
+    id_sede: '1002'
+},
+{
+    id_empleado: '2003',
+    nombre_empleado: 'Camilo Tobón',
+    telefonos: ['46468897', '895645455'],
+    ubicacion: {
+            direccion: 'CQ 095 065 025',
+            ciudad: 'Bello'
+    },
+    salario: 1300000,
+    cargo: 'mesero',
+    fecha_nacimiento: '1993-03-02',
+    id_sede: '1003'
+}
+
+])

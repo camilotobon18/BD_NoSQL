@@ -1,0 +1,35 @@
+db.cliente.insert([
+{
+    id_cliente: 3001,
+    nombre_cliente: 'Tatiana Uribe',
+    telefonos: ['46546546', '312156465'],
+    ubicacion: {
+            direccion: 'CL 021 095 45',
+            ciudad: 'Medellin'},
+    estado_civil: 'Soltera',
+    correo: 'tatiana@gmail.com',
+    fecha_nacimiento: '1995-01-01'
+},
+{
+    id_cliente: 3002,
+    nombre_cliente: 'Juan Ortiz',
+    telefonos: ['46956546', '312156465'],
+    ubicacion: {
+            direccion: 'CL 095 015 45',
+            ciudad: 'Medellin'},
+    estado_civil: 'Divorciado',
+    correo: 'juan@gmail.com',
+    fecha_nacimiento: '1991-01-01'
+},
+{
+    id_cliente: 3003,
+    nombre_cliente: 'Carlos Madrid',
+    telefonos: ['469654786', '31326355'],
+    ubicacion: {
+            direccion: 'CQ 010 095 45',
+            ciudad: 'Bello'},
+    estado_civil: 'Casado',
+    correo: 'carlos@gmail.com',
+    fecha_nacimiento: '1984-07-08'
+},
+])

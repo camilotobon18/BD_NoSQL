@@ -1,0 +1,40 @@
+db.sedes.insert([{
+    id_sede: '1001',
+    nombre_sede: 'Nuevo Occidente',
+    horario_apertura: '07:00',
+    horario_cierre: '19:00',
+    telefonos: ['3112525', '4251125'],
+    capacidad_aforo: 25,
+    ubicacion: {
+            direccion: 'CL 045 011 021',
+            ciudad: 'Medellin'
+    }
+}, 
+{
+    id_sede: '1002',
+    nombre_sede: 'Centro',
+    horario_apertura: '08:00',
+    horario_cierre: '20:00',
+    telefonos: ['4012521', '4251125'],
+    capacidad_aforo: 34,
+    ubicacion: {
+            direccion: 'CR 065 011 021',,
+            ciudad: 'Envigado'
+    }
+},
+{
+    id_sede: '1003',
+    nombre_sede: 'Norte',
+    direccion: 'TV 071 011 021',
+    horario_apertura: '09:00',
+    horario_cierre: '21:00',
+    telefonos: ['3112525', '4251125'],
+    capacidad_aforo: 31,
+    ubicacion: {
+            direccion: 'TV 021 035 096',
+            ciudad: 'Bello'
+    }
+}
+])
+
+//bd mixta, en grafos para la información de redes sociales
