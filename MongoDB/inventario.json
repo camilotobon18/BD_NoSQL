@@ -1,16 +1,19 @@
-db.inventario.insert([{
-    id_item: '8001',
+db.inventario.insert([
+{
+    id_item: 1,
+    id_producto: 8001,
     nombre_item: 'spaghetti delgado',
     cantidad: 10,
     unidad_medida: 'libra',
     precio: 3000,
-    fecha: '2021-09-04'
+    fecha: '2021-09-04',
     accion: 'compra',
     id_sede: 1001,
     especialidad: 'granos',
 },
 {
-    id_item: '8001',
+    id_item: 2,
+    id_producto: 8001,
     nombre_item: 'spaghetti delgado',
     cantidad: 7,
     unidad_medida: 'libra',
@@ -20,7 +23,8 @@ db.inventario.insert([{
     especialidad: 'granos',
 },
 {
-    id_item: '8002',
+    id_item: 3,
+    id_producto: 8002,
     nombre_item: 'limones',
     cantidad: 30,
     unidad_medida: 'libra',
@@ -30,7 +34,8 @@ db.inventario.insert([{
     especialidad: 'frutas',
 },
 {
-    id_item: '8002',
+    id_item: 4,
+    id_producto: 8002,
     nombre_item: 'limones',
     cantidad: 12,
     unidad_medida: 'libra',
@@ -39,4 +44,4 @@ db.inventario.insert([{
     id_sede: 1002,
     especialidad: 'frutas',
 }
-])
+]);

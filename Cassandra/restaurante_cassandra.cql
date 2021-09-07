@@ -76,6 +76,7 @@ CREATE TABLE productos_por_factura (
 
 CREATE TABLE inventario (
   id_item int,
+  nombre_item text,
   fecha_caducidad date,
   cantidades_disponibles int,
   medida int,

@@ -35,4 +35,4 @@ db.menu.insert([{
     impuesto: 0.08
 }
 
-])
+]);

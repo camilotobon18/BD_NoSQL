@@ -24,7 +24,6 @@ VALUES( 'Anderson Jimenez', '15565545', 'CR  012  065  025', '1984-03-02',2,2500
 INSERT INTO recurso_humano(nombre_empleado, telefono, direccion, fecha_nacimiento, id_sede, salario, cargo,ciudad) 
 VALUES( 'Camilo Tobón', '895645455', 'CQ  095  065  025', '1993-03-02',3,1300000, 'Mesero', 'Bello');
 
-
 -- Menu
 INSERT INTO menu(nombre_producto, precio, especialidad, medida, unidad_medida, impuesto) 
 VALUES( 'Hamburguesa BBQ',20000, 'Comida rapida',150, 'grs',0.08);
@@ -62,3 +61,54 @@ INSERT INTO productos_por_factura(id_producto, id_factura, cantidad, precio)
 VALUES(2,4,2,22000);
 INSERT INTO productos_por_factura(id_producto, id_factura, cantidad, precio) 
 VALUES(3,4,2,7000);
+
+-- Inventario
+INSERT INTO inventario(fecha_caducidad, cantidades_disponibles, medida, unidad_medida, especialidad, id_sede, nombre_prod) VALUES ( '2020-01-01',20,1, 'libra', 'grano',1, 'pasta larga');
+INSERT INTO inventario(fecha_caducidad, cantidades_disponibles, medida, unidad_medida, especialidad, id_sede, nombre_prod) VALUES ( '2021-03-07',30,500, 'ml', 'bebida',1, 'vino');
+INSERT INTO inventario(fecha_caducidad, cantidades_disponibles, medida, unidad_medida, especialidad, id_sede, nombre_prod) VALUES ( '2021-04-09',10,100, 'grs', 'condimento',2, 'pimienta');
+INSERT INTO inventario(fecha_caducidad, cantidades_disponibles, medida, unidad_medida, especialidad, id_sede, nombre_prod) VALUES ( '2020-12-11',5,1, 'libra', 'carne',3, 'lomo de cerdo');
+INSERT INTO inventario(fecha_caducidad, cantidades_disponibles, medida, unidad_medida, especialidad, id_sede, nombre_prod) VALUES ( '2021-12-11',15,1, 'libra', 'carne',2, 'pierna de cerdo');
+
+
+
+-- productos vencidos
+select * from inventario where fecha_caducidad < CURDATE() order by fecha_caducidad ASC;
+-- productos proximos a vencer
+select * from inventario where fecha_caducidad > CURDATE() order by fecha_caducidad ASC;
+-- menus mas vendidos
+select m.nombre_producto, sum(pf.cantidad) as 'cantidad', (sum(pf.cantidad) * sum(pf.precio)) as valor_total 
+from productos_por_factura pf inner join menu m
+on m.id_producto = pf.id_producto group by m.id_producto order by valor_total DESC;
+-- los trabajadores que menos venden
+select rh.nombre_empleado, sum(f.total) as venta 
+from recurso_humano rh inner join facturacion f on rh.id_empleado = f.id_empleado
+group by rh.id_empleado order by venta ASC;
+-- los clientes mas frecuentes
+select c.nombre_cliente, c.apellido_cliente, count(f.id_factura) as numero_de_visitas 
+from cliente c inner join facturacion f on c.id_cliente = f.id_cliente
+group by c.id_cliente order by numero_de_visitas DESC;
+-- horarios y dias con mas ventas y con mas visitas
+-- por dias
+select dayofweek(fecha_hora) as dia, sum(total) as numero_de_visitas
+from facturacion group by dia order by numero_de_visitas DESC;
+-- por horas
+select HOUR(fecha_hora) as hora, sum(total) as numero_de_visitas
+from facturacion group by hora order by numero_de_visitas DESC;
+-- trabajadores por sede
+select s.nombre_sede, count(rh.id_empleado) as num_empleados 
+from sedes s inner join recurso_humano rh on s.id_sede = rh.id_sede
+group by s.id_sede order by num_empleados DESC;
+-- total de salarios por sede
+select s.nombre_sede, SUM(rh.salario) as salario_sede 
+from sedes s inner join recurso_humano rh on s.id_sede = rh.id_sede
+group by s.id_sede order by salario_sede DESC;
+-- ventas por sede y ciudad
+-- por sede
+select s.nombre_sede, SUM(f.total) as ventas 
+from sedes s inner join facturacion f on s.id_sede = f.id_sede
+group by s.id_sede order by ventas DESC;
+-- por ciudad
+select s.ciudad, SUM(f.total) as ventas 
+from sedes s inner join facturacion f on s.id_sede = f.id_sede
+group by s.ciudad order by ventas DESC;
+

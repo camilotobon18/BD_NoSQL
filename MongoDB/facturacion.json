@@ -91,4 +91,4 @@ db.facturacion.insert([{
     ]
 }
 
-])
+]);

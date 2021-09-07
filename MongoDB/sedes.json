@@ -1,5 +1,5 @@
 db.sedes.insert([{
-    id_sede: '1001',
+    id_sede: 1001,
     nombre_sede: 'Nuevo Occidente',
     horario_apertura: '07:00',
     horario_cierre: '19:00',
@@ -11,19 +11,19 @@ db.sedes.insert([{
     }
 }, 
 {
-    id_sede: '1002',
+    id_sede: 1002,
     nombre_sede: 'Centro',
     horario_apertura: '08:00',
     horario_cierre: '20:00',
     telefonos: ['4012521', '4251125'],
     capacidad_aforo: 34,
     ubicacion: {
-            direccion: 'CR 065 011 021',,
+            direccion: 'CR 065 011 021',
             ciudad: 'Envigado'
     }
 },
 {
-    id_sede: '1003',
+    id_sede: 1003,
     nombre_sede: 'Norte',
     direccion: 'TV 071 011 021',
     horario_apertura: '09:00',
@@ -35,6 +35,6 @@ db.sedes.insert([{
             ciudad: 'Bello'
     }
 }
-])
+]);
 
 //bd mixta, en grafos para la información de redes sociales

@@ -38,4 +38,4 @@ db.recurso_humano.insert([{
     id_sede: '1003'
 }
 
-])
+]);

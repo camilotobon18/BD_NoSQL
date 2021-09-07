@@ -108,6 +108,7 @@ CREATE TABLE `productos_por_factura` (
 
 CREATE TABLE `inventario` (
   `id_item` int(6) NOT NULL,
+  `nombre_prod` varchar(30) NOT NULL,
   `fecha_caducidad` date NOT NULL,
   `cantidades_disponibles` int NOT NULL,
   `medida` int NOT NULL,
@@ -180,6 +181,3 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-
-
-
