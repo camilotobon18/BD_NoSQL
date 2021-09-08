@@ -62,6 +62,7 @@ CREATE TABLE facturacion (
   subtotal int,
   impuesto int,
   total int,
+  productos Set<text>
   PRIMARY KEY(id_factura)
 );
 

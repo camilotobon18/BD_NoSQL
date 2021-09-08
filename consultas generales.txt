@@ -3,12 +3,8 @@
 -- 2. los menus mas vendidos
 
 -- 3. los trabajadores que menos venden
-db.facturacion.find().pretty();
-db.recurso_humano.find().pretty();
 
 -- 4. los clientes mas frecuentes
-db.cliente.find().pretty();
-db.facturacion.find().pretty();
 
 -- 5. horarios y dias con mas ventas y con mas visitas
 

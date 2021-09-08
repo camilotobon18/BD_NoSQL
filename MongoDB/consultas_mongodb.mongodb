@@ -1,0 +1,32 @@
+//1. productos del inventario que caducaron y proximos a vencer
+
+//2. los menus mas vendidos
+db.facturacion.aggregate([ 
+    {"$unwind":'$productos'},
+    {"$group": 
+        {_id:'$productos.nombre_producto',
+        count:{$sum:"$productos.precio"}  }}
+    ]);
+
+//3. los trabajadores que menos venden
+db.facturacion.aggregate([ {"$group" : {_id:"$id_empleado", count:{$sum:"$total"}}} ]);
+
+//4. los clientes mas frecuentes
+db.facturacion.aggregate([ {"$group" : {_id:"$id_cliente", count:{$sum:1}}} ]);
+
+//5. horarios y dias con mas ventas y con mas visitas
+
+
+//6. trabajadores por sede
+db.recurso_humano.aggregate([ {"$group" : {_id:"$nombre_empleado", count:{$sum:1}}} ])
+
+//7. total de salarios por sede
+db.recurso_humano.aggregate([ {"$group" : {_id:"$id_sede", count:{$sum:"$salario"}}} ])
+
+//8. ventas por sede y ciudad
+db.facturacion.aggregate([ {"$group" : {_id:"$id_sede", count:{$sum:"$total"}}} ])
+
+
+
+
+

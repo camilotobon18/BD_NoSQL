@@ -62,6 +62,9 @@ INSERT INTO productos_por_factura(id_item, id_producto, id_factura, cantidad, pr
 VALUES(8, 3,4,2,7000);
 
 
+
+
+
 -- productos vencidos
 select * from inventario where fecha_caducidad < now() order by fecha_caducidad ASC;
 -- productos proximos a vencer
