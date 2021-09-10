@@ -35,14 +35,14 @@ INSERT INTO menu(nombre_producto, precio, especialidad, medida, unidad_medida, i
 VALUES( 'Limonada',6000, 'Bebidas',400, 'ml',0.08);
 
 -- Facturacion
-INSERT INTO facturacion(id_cliente, id_empleado, id_sede, subtotal,impuesto, total) 
-VALUES(1,3,1,31280,2720,34000);
-INSERT INTO facturacion(id_cliente, id_empleado, id_sede, subtotal,impuesto, total) 
-VALUES(2,2,1,51520,4480,56000);
-INSERT INTO facturacion(id_cliente, id_empleado, id_sede, subtotal,impuesto, total) 
-VALUES(3,2,2,42320,3680,46000);
-INSERT INTO facturacion(id_cliente, id_empleado, id_sede, subtotal,impuesto, total) 
-VALUES(2,1,3,53360,4640,58000);
+INSERT INTO facturacion(id_cliente, id_empleado, id_sede, subtotal,impuesto, total, fecha_hora) 
+VALUES(1,3,1,31280,2720,34000, '2021-07-01 09:05:00');
+INSERT INTO facturacion(id_cliente, id_empleado, id_sede, subtotal,impuesto, total, fecha_hora) 
+VALUES(2,2,1,51520,4480,56000, '2021-06-01 16:25:00');
+INSERT INTO facturacion(id_cliente, id_empleado, id_sede, subtotal,impuesto, total, fecha_hora) 
+VALUES(3,2,2,42320,3680,46000, '2021-08-01 16:05:00');
+INSERT INTO facturacion(id_cliente, id_empleado, id_sede, subtotal,impuesto, total, fecha_hora) 
+VALUES(2,1,3,53360,4640,58000, '2021-08-01 19:05:00');
 
 -- Productos_por_factura
 INSERT INTO productos_por_factura(id_producto, id_factura, cantidad, precio) 
@@ -111,4 +111,13 @@ group by s.id_sede order by ventas DESC;
 select s.ciudad, SUM(f.total) as ventas 
 from sedes s inner join facturacion f on s.id_sede = f.id_sede
 group by s.ciudad order by ventas DESC;
+
+
+
+
+
+
+
+
+
 

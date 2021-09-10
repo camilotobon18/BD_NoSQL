@@ -1,0 +1,90 @@
+//Colección de Clientes
+db.cliente.insert([
+{
+    id_cliente: 3001,
+    nombre_cliente: 'Tatiana Uribe',
+    telefonos: ['46546546', '312156465'],
+    ubicacion: {
+            direccion: 'CL 021 095 45',
+            ciudad: 'Medellin'},
+    estado_civil: 'Soltera',
+    correo: 'tatiana@gmail.com',
+    fecha_nacimiento: '1995-01-01'
+}]);
+//Colección de Menu+
+db.menu.insert([{
+    id_producto: 5001,
+    nombre_producto: 'Hamburguesa BBQ',
+    precio: 20000,
+    especialidad: 'Comida rapida',
+    medida: 150,
+    unidad_medida: 'grs',
+    impuesto: 0.08
+}]);
+//Colección de recurso humano
+db.recurso_humano.insert([{
+    id_empleado: '2001',
+    nombre_empleado: 'Fabian Patiño',
+    telefonos: ['5645642', '9895645'],
+    ubicacion: {
+            direccion: 'CQ 02 012 016',
+            ciudad: 'Medellin'
+    },
+    salario: 1500000,
+    cargo: 'Auxiliar de cocina',
+    fecha_nacimiento: '1985-01-02',
+    id_sede: '1001'
+}]);
+//Colección de sedes
+db.sedes.insert([{
+    id_sede: 1001,
+    nombre_sede: 'Nuevo Occidente',
+    horario_apertura: '07:00',
+    horario_cierre: '19:00',
+    telefonos: ['3112525', '4251125'],
+    capacidad_aforo: 25,
+    ubicacion: {
+            direccion: 'CL 045 011 021',
+            ciudad: 'Medellin'
+    }
+}]);
+//Colección de facturación
+db.facturacion.insert([{
+    id_factura: '7001',
+    fecha_hora: '2021-09-05 15:01:03',
+    subtotal: 31280,
+    impuesto: 2720,
+    total: 34000,
+    id_cliente: 3001,
+    id_empleado: 2003,
+    id_sede: 1001,
+    productos: [{
+            id_producto: 5001,
+            nombre_producto: 'Hamburguesa BBQ',
+            cantidad: 1,
+            precio: 20000
+            },
+            {
+            id_producto: 5003,
+            nombre_producto: 'Soda Michelada',
+            cantidad: 2,
+            precio: 7000
+            }
+    ]
+}
+]);
+//Colección de inventario
+db.inventario.insert([
+{
+    id_item: 1,
+    id_producto: 8001,
+    nombre_item: 'spaghetti delgado',
+    cantidad: 10,
+    unidad_medida: 'libra',
+    precio: 3000,
+    fecha: '2021-09-04',
+    accion: 'compra',
+    id_sede: 1001,
+    especialidad: 'granos'
+}
+]);

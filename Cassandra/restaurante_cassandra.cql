@@ -1,9 +1,6 @@
---cada fragmento de datos, quedara almacenado en x maquinas. replication_factor
+--cada fragmento de datos, quedara almacenado en x maq replication_factor
 create keyspace bdrestaurante with replication =
 {'class':'SimpleStrategy','replication_factor':5};
-
-use bdrestaurante;
-
 CREATE TABLE sedes (
   id_sede int,
   nombre_sede text,
@@ -15,7 +12,6 @@ CREATE TABLE sedes (
   ciudad text,
   PRIMARY KEY(id_sede)  
 );
-
 CREATE TABLE cliente (
   id_cliente int,
   nombre_cliente text,
@@ -28,7 +24,6 @@ CREATE TABLE cliente (
   ciudad text,
   PRIMARY KEY(id_cliente)
 );
-
 CREATE TABLE recurso_humano (
   id_empleado int,
   nombre_empleado text,

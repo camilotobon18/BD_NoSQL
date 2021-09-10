@@ -1,0 +1,18 @@
+-- 1. productos del inventario que caducaron y proximos a vencer
+
+-- 2. los menus mas vendidos
+
+-- 3. los trabajadores que menos venden
+
+
+-- 4. los clientes mas frecuentes
+
+
+-- 5. horarios y dias con mas ventas y con mas visitas
+
+
+-- 6. trabajadores por sede
+
+-- 7. total de salarios por sede
+
+-- 8. ventas por sede y ciudad

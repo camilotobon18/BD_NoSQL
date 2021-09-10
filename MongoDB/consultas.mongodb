@@ -17,14 +17,14 @@ db.facturacion.aggregate([ {"$group" : {_id:"$id_cliente", count:{$sum:1}}} ]);
 //5. horarios y dias con mas ventas y con mas visitas
 
 
-//6. trabajadores por sede
-db.recurso_humano.aggregate([ {"$group" : {_id:"$nombre_empleado", count:{$sum:1}}} ])
+//6. Número de trabajadores por sede
+db.recurso_humano.aggregate([ {"$group" : {_id:"$nombre_empleado", count:{$sum:1}}} ]);
 
 //7. total de salarios por sede
-db.recurso_humano.aggregate([ {"$group" : {_id:"$id_sede", count:{$sum:"$salario"}}} ])
+db.recurso_humano.aggregate([ {"$group" : {_id:"$id_sede", count:{$sum:"$salario"}}} ]);
 
 //8. ventas por sede y ciudad
-db.facturacion.aggregate([ {"$group" : {_id:"$id_sede", count:{$sum:"$total"}}} ])
+db.facturacion.aggregate([ {"$group" : {_id:"$id_sede", count:{$sum:"$total"}}} ]);
 
 
 

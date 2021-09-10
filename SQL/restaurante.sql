@@ -161,14 +161,10 @@ ALTER TABLE `productos_por_factura`
 ALTER TABLE `sedes`
   MODIFY `id_sede` int(6) NOT NULL AUTO_INCREMENT;
 
---
--- Filtros para la tabla `facturacion`
---
 ALTER TABLE `facturacion`
   ADD CONSTRAINT `facturacion_ibfk_1` FOREIGN KEY (`id_sede`) REFERENCES `sedes` (`id_sede`),
   ADD CONSTRAINT `facturacion_ibfk_2` FOREIGN KEY (`id_empleado`) REFERENCES `recurso_humano` (`id_empleado`),
   ADD CONSTRAINT `facturacion_ibfk_3` FOREIGN KEY (`id_cliente`) REFERENCES `cliente` (`id_cliente`);
-  
   
 ALTER TABLE `inventario`  
   ADD CONSTRAINT `inventario_ibfk_1` FOREIGN KEY (`id_sede`) REFERENCES `sedes` (`id_sede`);
